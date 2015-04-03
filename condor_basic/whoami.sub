@@ -1,0 +1,4 @@
+Executable = whoami.sh
+Universe   = vanilla
+
+Queue

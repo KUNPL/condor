@@ -1,0 +1,10 @@
+Executable = a.out
+Universe   = vanilla
+
+Log        = condor_example2.log
+Output     = condor_example2.out
+Error      = condor_example2.error
+
+Arguments  = i love chicken
+
+Queue

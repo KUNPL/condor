@@ -1,5 +1,0 @@
-universe = vanilla
-
-executable = example0.sh
-
-queue 10
