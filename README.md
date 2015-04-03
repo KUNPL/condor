@@ -30,11 +30,13 @@ Condor는 메인컴퓨터에 연결되어 있는 다른 Core들을 사용하여 
 
 성공했다면 condor 폴더가 생겼을 것이다. 지금부터 설명할 메크로들은 모두 여기에 들어있다. 실패했다면 그냥 [여기](https://github.com/KUNPL/condor)에 들어가 직접 보면서 설명을 읽자!
 
-### 1. 실행파일을 이용할 때
+### 1. 실행파일을 이용
 
-실행가능한 파일을 이용해서 Condor를 돌리고 싶다. 실행 가능한 파일이란 쉘 스크립트, 혹은 컴파일을 해서 나온 실행 파일을 의미한다. 간단하게 "./"를 이용해서 돌릴 수 있는 파일들이다.
+실행가능한 파일을 이용해서 Condor를 돌리고 싶다. 실행 가능한 파일이란 쉘 스크립트, 혹은 컴파일을 해서 나온 실행 파일을 의미한다. 간단하게 말해 "./"를 이용해서 돌릴 수 있는 파일들이다.
 
-**run_executable** 폴더에 **condor_executable.sh**와 **condor_executable_simple.sh** 를 이용, 다음과 같이 사용한다.
+사용할 메크로 파일은 **run_executable** 폴더의 **condor_executable.sh**와 **condor_executable_simple.sh**이다.
+
+다음과 같이 사용한다.
 
 폴더를 생성해서 결과들을 저장하고 싶을 때,
 
@@ -54,7 +56,7 @@ Condor는 메인컴퓨터에 연결되어 있는 다른 Core들을 사용하여 
 run_executable 폴더에 ilovechicken.cc 을 컴파일 및 실행,
 
 	$ g++ ilovechicken 
-	$ ./condor_executable_simple_sh a.out i love chicken
+	$ ./condor_executable_simple.sh a.out i love chicken
 
 실행 결과 : ilovechicken.txt
 
@@ -62,9 +64,53 @@ run_executable 폴더에 ilovechicken.cc 을 컴파일 및 실행,
 	love
 	chicken
 
-무슨일이 일어난건지 모르겠다면 생각해보자!
+### 2. ROOT 매크로를 이용
+`root` 명령어를 이용해서 돌릴 수 있는 매크로를 이용하고 싶다.
 
-### 알아둬야 할 명령어
+사용할 파일은 **run_root** 폴더의 **condor_root.sh**와 **condor_root_simple.sh**이다.
+
+다음과 같이 사용한다.
+
+폴더를 생성해서 결과들을 저장하고 싶을 때,
+
+	$ ./condor_root.sh `폴더 이름` `실행파일 이름`
+
+현재 경로에 결과들을 저장하고 싶을 때,
+
+	$ ./condor_root_simple.sh `실행파일 이름`
+
+`실행파일 이름` 은 평소에 root 이후에 쓰는 이름 그대로 적으면 된다. `macro.C`, `macro.C++`, `'macro.C(input_1, ...)'` 등 모두 가능하다.
+
+#### 해보자!
+run_root 폴더에 random_gaus.C 을 컴파일 및 실행,
+
+	$ ./condor_root.sh condor_result random_gaus.C+
+
+condor_result 폴더를 열어보자.
+
+### 3. Python 매크로를 이용
+`python` 명령어를 이용해서 돌릴 수 있는 매크로를 이용하고 싶다.
+
+사용할 파일은 **run_python** 폴더의 **condor_python.sh**와 **condor_python_simple.sh**이다.
+
+다음과 같이 사용한다.
+
+폴더를 생성해서 결과들을 저장하고 싶을 때,
+
+	$ ./condor_python.sh `폴더 이름` `실행파일 이름` `매개변수1` ... `매개변수7`
+
+현재 경로에 결과들을 저장하고 싶을 때,
+
+	$ ./condor_python_simple.sh `실행파일 이름` `매개변수1` ... `매개변수7`
+
+#### 해보자!
+run_python 폴더에 print.py 을 컴파일 및 실행,
+
+	$ ./condor_python_simple.sh print.py
+
+별다른 파이썬 스크립트가 생각나지 않았다...
+
+### 꼭 알아둬야 할 명령어
 |명령어|설명|
 |:----:|----|
 |condor_q|현재 Condor에 Submit된 작업들의 목록을 보여준다|
