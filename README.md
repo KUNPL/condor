@@ -5,7 +5,7 @@ Condor 사용법
 Condor는 똑같은 계산을 여러 번 해야 할 때, 여러개의 컴퓨터에 나눠서 프로그램을 시켜주는 프로그램이다.
 사실 이것저것 좋은 기능이 많지만, 내가 생각하기에 우리가 쓸 기능만 적어둔다.
 
-### Condor 이럴 때 사용한다!
+## Condor 이럴 때 사용한다!
 
 ##### 케이스 1 :
 
@@ -22,27 +22,27 @@ Condor는 똑같은 계산을 여러 번 해야 할 때, 여러개의 컴퓨터�
 
 Condor는 메인컴퓨터에 연결되어 있는 다른 Core들을 사용하여 일을 시킨다. 따라서 Condor를 이용한다면 다른 사람들을 괴롭히지 않고 일을 시킬 수 있다.
 
-### 그래서 사용법
+## 그래서 사용법
 
-_아마도_ 지금 보고 있는 깃 저장소를 내 작업환경으로 가져오자. 서버에서 다음과 같이 입력 하자. 
+이 깃 저장소를 내 작업환경으로 가져오자. 
 
-> git clone https://github.com/KUNPL/condor.git
+	$ git clone https://github.com/KUNPL/condor.git
 
-성공했다면 condor 폴더가 생겼을 것이다. 지금부터 설명할 메크로들은 모두 여기에 들어있다. 
+성공했다면 condor 폴더가 생겼을 것이다. 지금부터 설명할 메크로들은 모두 여기에 들어있다. 실패했다면 그냥 [여기](https://github.com/KUNPL/condor)에 들어가 직접 보면서 설명을 읽자!
 
-실패했다면 그냥 [깃허브](https://github.com/KUNPL/condor) 에 들어가 직접 보면서 설명을 읽자!
+### 1. 실행파일을 이용할 때
 
-#### 1. 실행파일을 이용할 때
+실행가능한 파일을 이용해서 Condor를 돌리고 싶다. 실행 가능한 파일이란 쉘 스크립트, 혹은 컴파일을 해서 나온 실행 파일을 의미한다. 간단하게 "./"를 이용해서 돌릴 수 있는 파일들이다.
 
-실행가능한 파일을 돌리고 싶다. 실행 가능한 파일이란 쉘 스크립트, 혹은 컴파일을 해서 나온 실행 파일을 의미한다. 간단하게 "./"를 이용해서 돌릴 수 있는 파일들이다. 루트 매크로나 파이썬 매크로 등을 사용하고 싶다면 스크롤을 내려서 해당 설명을 읽자. 
+**run_executable** 폴더에 **condor_executable.sh**와 **condor_executable_simple.sh** 를 이용, 다음과 같이 사용한다.
 
-**run_executable** 폴더에 **condor_executable.sh**와 **condor_executable_simple.sh** 를 보자. 다음과 같이 사용한다.
+폴더를 생성해서 결과들을 저장하고 싶을 때,
 
-결과들을 다른 폴더에 저장하고 싶을 때 : 
-> ./condor_executable.sh `폴더 이름` `실행파일 이름` `매개변수1` ... `매개변수7` 
+	$ ./condor_executable.sh `폴더 이름` `실행파일 이름` `매개변수1` ... `매개변수7`
 
-결과들을 현재 경로에 저장하고 싶을 때 : 
-> ./condor_executabe_simple.sh `실행파일 이름` `매개변수1` ... `매개변수7`
+현재 경로에 결과들을 저장하고 싶을 때,
+
+	$ ./condor_executabe_simple.sh `실행파일 이름` `매개변수1` ... `매개변수7`
 
 |변수|설명|
 |:--:|----|
@@ -50,12 +50,11 @@ _아마도_ 지금 보고 있는 깃 저장소를 내 작업환경으로 가져�
 |`실행파일 이름`|실행시킬 파일 이름|
 |`매개변수N`|실행시킬 때 매개변수가 필요한 경우 넣어준다.|
 
-##### 해보자!
-run_executable 폴더에 ilovechicken.cc 을 컴파일,
-> g++ ilovechicken 
+#### 해보자!
+run_executable 폴더에 ilovechicken.cc 을 컴파일 및 실행,
 
-실행
-> ./condor_executable.sh a.out i love chicken
+	$ g++ ilovechicken 
+	$ ./condor_executable_simple_sh a.out i love chicken
 
 실행 결과 : ilovechicken.txt
 
@@ -63,9 +62,9 @@ run_executable 폴더에 ilovechicken.cc 을 컴파일,
 	love
 	chicken
 
-무슨일이 일어난건지 모르겠다면 공부하자!
+무슨일이 일어난건지 모르겠다면 생각해보자!
 
-### 알아둬야 할 다른 명령어
+### 알아둬야 할 명령어
 |명령어|설명|
 |:----:|----|
 |condor_q|현재 Condor에 Submit된 작업들의 목록을 보여준다|
