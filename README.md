@@ -24,17 +24,17 @@ Condor는 메인컴퓨터에 연결되어 있는 다른 Core들을 사용하여 
 
 ## 그래서 사용법
 
-이 깃 저장소를 내 작업환경으로 가져오자. 
+KUNPL/condor.git 깃 저장소를 가져오자. 
 
 	$ git clone https://github.com/KUNPL/condor.git
 
-성공했다면 condor 폴더가 생겼을 것이다. 지금부터 설명할 메크로들은 모두 여기에 들어있다. 실패했다면 그냥 [여기](https://github.com/KUNPL/condor)에 들어가 직접 보면서 설명을 읽자!
+성공했다면 condor 폴더가 생겼을 것이다. 지금부터 설명할 메크로들은 모두 여기에 들어있다. 실패했거나 귀찮다면 그냥 [여기](https://github.com/KUNPL/condor)에 들어가 직접 보면서 설명을 읽자!
 
 ### 1. 실행파일을 이용
 
 실행가능한 파일을 이용해서 Condor를 돌리고 싶다. 실행 가능한 파일이란 쉘 스크립트, 혹은 컴파일을 해서 나온 실행 파일을 의미한다. 간단하게 말해 "./"를 이용해서 돌릴 수 있는 파일들이다.
 
-사용할 메크로 파일은 **run_executable** 폴더의 **condor_executable.sh**와 **condor_executable_simple.sh**이다.
+사용할 파일은 **run_executable** 폴더의 **condor_executable.sh**와 **condor_executable_simple.sh**이다.
 
 폴더를 생성해서 결과들을 저장하고 싶을 때,
 
