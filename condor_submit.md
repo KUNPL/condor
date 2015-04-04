@@ -17,7 +17,7 @@
 
     [옵션] = [값]
 
-그리고 마지막 줄에 "Queue"라고 쓰면 된다. 우린 단지 어떤 [옵션]이 어떤 [값]을 넣었을때 어떻게 작동하는지만 알고있으면 된다. 우리가 쓸만한 옵션을을 나열해 본다. 참고로 제출파일은 대소문자를 구분하지 않는다.
+그리고 마지막 줄에 "Queue"라고 쓰면 된다. 우린 단지 어떤 [옵션]이 어떤 [값]을 넣었을때 어떻게 작동하는지만 알고있으면 된다. 우리가 쓸만한 옵션을을 나열해 본다. 참고로 제출파일은 대소문자를 구분하지 않으며 주석은 글 앞에 "#"을 기입하여 쓴다.
 
 |옵션|설명|예제|
 |:--:|----|----|
@@ -26,6 +26,7 @@
 |arguments|실행파일 이후에 오는 매개변수들을 띄어쓰기로 구분하여 적자.|arguments = i love chicken|
 |initialdir|[값]의 이름으로 폴더를 만들고 결과파일들을 폴더에 저장한다. 옵션을 지정하지 않았다면 실행한 경로에 결과파일들을 저장한다.| initialdir = data |
 |log|콘도르 진행 로그를 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|log = example.log|
+|input|키보드 input을 적어둔 파일을 이용할때 사용한다.|example.in| 
 |output|작업이 돌아가면서 나오는 출력들을 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|output = example.out|
 |error|작업이 돌아가면서 나오는 에러를 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|error = example.err|
 |getenv|[값]이 true 라면 유저의 쉘 환경설정을 불러온다. .bash_profile 같은 설정들을 불러온다는 뜻이다.|getenv = true|
@@ -37,7 +38,7 @@
 
 예제들을 [condor_basic](https://github.com/KUNPL/condor/tree/master/condor_basic) 폴더에서 볼 수 있다.
 
-**ilovechicken.sub** :
+[**ilovechicken.sub**](https://github.com/KUNPL/condor/blob/master/condor_basic/ilovechicken.sub) :
 
     Executable = a.out
     Universe   = vanilla
@@ -50,7 +51,31 @@
 
     Queue
 
+[**whoami.sub**](https://github.com/KUNPL/condor/blob/master/condor_basic/whoami.sub) :
 
+    Executable = whoami.sh
+    Universe   = vanilla
+
+    Queue 10
+
+[**condor_executable**](https://github.com/KUNPL/condor/blob/master/run_executable/condor_executable.sh)의 일부 :
+
+    Executable   = $dir/$2
+    Arguments    = $3 $4 $5 $6 $7 $8 $9
+
+    Initialdir   = $dir/$idir
+    Log          = $outfile.log
+    Error        = $outfile.err
+    Output       = $outfile.out
+    #Input        = WHEN_YOU_HAVE_INPUT_FILES
+
+    Universe     = vanilla
+    GetEnv       = True
+    Request_cpus = 1
+    Notification = Always
+    #Notify_user  = CHANGE_THIS_TO_YOUR_EMAIL
+
+    Queue
 
 ##참고자료
 + [condor_submit](http://research.cs.wisc.edu/htcondor/manual/v8.0/condor_submit.html)
