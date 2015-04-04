@@ -59,7 +59,7 @@ ilovechicken.cc 을 실행해보자.
 |condor_rm&nbsp;`기준`|`기준`에 따라 Condor에 Submit된 작업을 지운다. <br> `기준`에는 Submitter의 아이디를 사용할 수도 있고, Job ID(번호)를 넣어도 된다. 번호를 넣는 경우에 `-constraint 'ClusterId>시작번호'`를 넣으면 시작번호보다 큰 번호들의 작업들을 다 지운다.|
 |condor_status|현재 어떤 서버가 켜져있고, 어떤 서버에 몇개의 코어가 있으며 각각의 코어의 상태를 보여준다.|
 
-`condor_q`를 사용하였을때 나오는 정보들은 다음과 같다.
+`condor_q`를 사용했을 때 나오는 정보들은 다음과 같다.
 + **ID** : 번호
 + **OWNER** : 실행한 사람
 + **SUBMITTED** : 일을 제출한 시간
