@@ -35,6 +35,20 @@
 |notification|notify_user에서 설정한 메일로 알림을 보낸다. Always: 모든 스텝 마다 알림, Complete: 끝났을 때 알림, Error: 이상이 있을 때마다 알림, Never(기본설정): 알리지 않음.|notification = always|
 |queue|일을 돌린다. queue는 예외로 값을 넣지 않는다.여러번 기입하면 기입한 만큼, 뒤에 숫자를 적으면 그만큼 일이 제출된다. |queue|
 
+예제들을 [condor_basic](https://github.com/KUNPL/condor/tree/master/condor_basic) 폴더에서 볼 수 있다.
+
+**ilovechicken.sub** :
+
+    Executable = a.out
+    Universe   = vanilla
+
+    Log        = condor_example2.log
+    Output     = condor_example2.out
+    Error      = condor_example2.error
+
+    Arguments  = i love chicken
+
+    Queue
 
 
 
