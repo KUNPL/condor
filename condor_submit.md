@@ -34,8 +34,8 @@
 |request_memory|[값]에 해당하는 만큼의 memory를 요청한다. 숫자 끝에 알파벳을 붙여서 단위를 나타낸다. K: Kbytes, M: Mbytes. G: Gbytes. T: Tbytes.|request_memoty = 1K|
 |notify_user|알림을 받아볼 이메일 주소.|notify_user = my@email.address|
 |notification|notify_user에서 설정한 메일로 알림을 보낸다. Always: 모든 스텝 마다 알림, Complete: 끝났을 때 알림, Error: 이상이 있을 때마다 알림, Never(기본설정): 알리지 않음.|notification = always|
+|priority|자연수인 [값]으로 작업의 중요도를 나타낸다. 중요도가 큰 작업이 중요도가 낮은 작업보다 먼저 돌아간다. 중요도는 한 사용자의 작업들 내에서 작용하며 다른 사용자에게는 영향을 미치지 않는다. 기본 [값]은 0이다.|priority = 1|
 |queue|일을 돌린다. queue는 예외로 값을 넣지 않는다.여러번 기입하면 기입한 만큼, 뒤에 숫자를 적으면 그만큼 일이 제출된다. |queue|
-|priority|자연수인 [값]으로 작업의 중요도를 나타낸다. 중요도가 큰 작업이 중요도가 낮은 작업보다 먼저 돌아간다. 중요도는 한 사용자의 작업들 내에서 작용하며 다른 사용자에게는 영향을 미치지 않는다. 기본 [값]은 0이다.|priority = 0|
 
 ***
 
