@@ -24,11 +24,11 @@ Condor는 똑같은 계산을 여러 번 해야 할 때, 여러개의 컴퓨터�
 
 쉘 스크립트, 혹은 컴파일을 해서 나온 실행파일을 이용해서 일을 돌리고 싶다. 간단하게 말해 "./"를 이용해서 돌리는 파일들이다. 루트나 파이썬을 이용하고 싶다면 루트는 [여기](https://github.com/KUNPL/condor/tree/master/run_root), 파이썬은 [여기](https://github.com/KUNPL/condor/tree/master/run_python)를 보자.
 
-**condor_executable.sh**  : 폴더를 생성해서 결과들을 저장한다.
+[**condor_executable.sh**](https://github.com/KUNPL/condor/blob/master/run_executable/condor_executable.sh)  : 폴더를 생성해서 결과들을 저장한다.
 
 	$ ./condor_executable.sh [폴더 이름] [실행파일] [매개변수1] ... [매개변수7]
 	
-**condor_executable_simple.sh** : 현재 경로에 결과들을 저장한다.
+[**condor_executable_simple.sh**](https://github.com/KUNPL/condor/blob/master/run_executable/condor_executable_simple.sh) : 현재 경로에 결과들을 저장한다.
 
 	$ ./condor_executabe_simple.sh [실행파일] [매개변수1] ... [매개변수7]
 
