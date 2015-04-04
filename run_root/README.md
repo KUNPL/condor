@@ -2,7 +2,7 @@
 
 ROOT 매크로를 이용해서 일을 돌리고 싶다.
 
-**run_root/condor_root.sh**  : 폴더를 생성해서 결과들을 저장한다.
+**condor_root.sh**  : 폴더를 생성해서 결과들을 저장한다.
 
 	$ ./condor_root.sh [폴더 이름] [실행파일 이름]
 
