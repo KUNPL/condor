@@ -75,6 +75,6 @@ ilovechicken.cc 을 실행해보자.
 + **CMD** : 실행 커맨드. [executable] [argument1] [argument2] ...
 
 ## 더 알고 싶다면
-+ [Condor 작업 제출하기]()
++ [Condor 작업 제출하기](https://github.com/KUNPL/condor/blob/master/condor_submit.md)
 + [Condor Online Manual](http://research.cs.wisc.edu/htcondor/manual/v8.0/ref.html)
 
