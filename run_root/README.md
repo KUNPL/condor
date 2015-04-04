@@ -13,6 +13,8 @@ ROOT 매크로를 이용해서 일을 돌리고 싶다.
 `실행파일` 은 `macro.C`, `macro.C++`, `'macro.C(input_1, ...)'` 등 `root`를 사용할때와 같다.
 
 #### 해보자!
-run_root 폴더에 random_gaus.C 을 컴파일 및 실행,
+random_gaus.C 을 실행해보자.
 
 	$ ./condor_root.sh condor_result random_gaus.C+
+	
+condor_result 폴더가 생겼다!
