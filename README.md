@@ -65,13 +65,16 @@ ilovechicken.cc 을 실행해보자.
 + **SUBMITTED** : 일을 제출한 시간
 + **RUN_TIME** : 돌아간 시간
 + **ST** : 상태
-  - H : 보류
-  - R : 돌아가는 중
-  - I : 대기
-  - C : 끝남
-  - X : 제거됨
-  - <= : Input을 전달
-  - >= : Output을 전달
+  - **H** : 보류
+  - **R** : 돌아가는 중
+  - **I** : 대기
+  - **C** : 끝남
+  - **X** : 제거됨
 + **PRI** : 중요도. 숫자가 높을 수록 중요도가 높다. 설정 하지 않았다면 0.
 + **SIZE** : 이미지 크기. 사용 메모리 크기를 설정하였다면 사용 메모리 크기.
 + **CMD** : 실행 커맨드. [executable] [argument1] [argument2] ...
+
+## 더 알고 싶다면
++ [Condor 작업 제출하기]()
++ [Condor Online Manual](http://research.cs.wisc.edu/htcondor/manual/v8.0/ref.html)
+
