@@ -61,7 +61,7 @@
 
     Queue 10
 
-[**condor_executable**](https://github.com/KUNPL/condor/blob/master/run_executable/condor_executable.sh)의 일부 :
+[**condor_executable.sh**](https://github.com/KUNPL/condor/blob/master/run_executable/condor_executable.sh)의 일부 :
 
     Executable   = $dir/$2
     Arguments    = $3 $4 $5 $6 $7 $8 $9
