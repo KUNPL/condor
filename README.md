@@ -16,15 +16,15 @@ Condor는 똑같은 계산을 여러 번 해야 할 때, 여러개의 컴퓨터�
 
 ## 그래서 사용법
 
-깃 저장소를 가져온다.
+깃 저장소를 가져온다. 필요없다면 패스!
 
 	$ git clone https://github.com/KUNPL/condor.git
 
-지금부터 설명할 메크로들은 모두 여기에 들어있다. 실패했거나 귀찮다면 그냥 [여기](https://github.com/KUNPL/condor)에 들어가 직접 보면서 설명을 읽자!
+지금부터 설명할 메크로들은 모두 [여기](https://github.com/KUNPL/condor/tree/master/run_executable)에 들어있다.
 
 쉘 스크립트, 혹은 컴파일을 해서 나온 실행파일을 이용해서 일을 돌리고 싶다. 간단하게 말해 "./"를 이용해서 돌리는 파일들이다. 루트나 파이썬을 이용하고 싶다면 루트는 [여기](https://github.com/KUNPL/condor/tree/master/run_root), 파이썬은 [여기](https://github.com/KUNPL/condor/tree/master/run_python)를 보자.
 
-**run_executable/condor_executable.sh**  : 폴더를 생성해서 결과들을 저장한다.
+**condor_executable.sh**  : 폴더를 생성해서 결과들을 저장한다.
 
 	$ ./condor_executable.sh `폴더 이름` `실행파일 이름` `매개변수1` ... `매개변수7`
 	
@@ -39,7 +39,7 @@ Condor는 똑같은 계산을 여러 번 해야 할 때, 여러개의 컴퓨터�
 |`매개변수N`|실행시킬 때 매개변수가 필요한 경우 넣어준다.|
 
 #### 해보자!
-run_executable 폴더에 ilovechicken.cc 을 컴파일 및 실행,
+ilovechicken.cc 을 실행해보자.
 
 	$ g++ ilovechicken 
 	$ ./condor_executable_simple.sh a.out i love chicken
