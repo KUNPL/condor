@@ -17,14 +17,20 @@
 
     [옵션] = [값]
 
-그리고 마지막 줄에 "Queue"라고 쓰면 된다. 우린 단지 어떤 [옵션]이 어떤 [값]을 넣었을때 어떻게 작동하는지만 알고있으면 된다. 우리가 쓸만한 옵션을을 나열해 본다.
+그리고 마지막 줄에 "Queue"라고 쓰면 된다. 우린 단지 어떤 [옵션]이 어떤 [값]을 넣었을때 어떻게 작동하는지만 알고있으면 된다. 우리가 쓸만한 옵션을을 나열해 본다. 참고로 제출파일은 대소문자를 구분하지 않는다.
 
 |옵션|설명|예제|
 |:--:|----|----|
-|Executable|실행파일 이름을 적는다.|Executable = example.sh|
-
-
-
+|executable|실행파일 이름|executable = example.sh|
+|universe|실행 옵션. 우리 서버에서는 vanilla 옵션 밖에 지원하지 않는다. 기본 설정이 vanilla 이지만 혹시 모르니 항상 적도록 하자.|universe = vanilla|
+|arguments|실행파일 이후에 오는 매개변수들을 띄어쓰기로 구분하여 적자.|arguments = i love chicken|
+|initialdir|[값]의 이름으로 폴더를 만들고 결과파일들을 폴더에 저장한다. 옵션을 지정하지 않았다면 실행한 경로에 결과파일들을 저장한다.| initialdir = data |
+|log|콘도르 진행 로그를 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|log = example.log|
+|output|작업이 돌아가면서 나오는 출력들을 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|log = example.out|
+|error|작업이 돌아가면서 나오는 에러를 [값]의 이름으로 생성한 파일에 저장한다. initialdir가 지정되어 있다면 파일을 initialdir에 저장한다.|log = example.err|
+|getenv|[값]이 true 라면 유저의 쉘 환경설정을 불러온다. .bash_profile 같은 설정들을 불러온다는 뜻이다.|getenv = true|
+|request_cpus|[값]에 해당하는 만큼의 CPU(core)를 요청한다. 기본설정으로는 1이다.|request_cpus = 2|
+|request_memory|[값]에 해당하는 만큼의 memory를 요청한다. 숫자 끝에 알파벳을 붙여서 단위를 나타낸다. K: Kbytes, M: Mbytes. G: Gbytes. T: Tbytes.|request_memoty = 1K|
 
 
 
