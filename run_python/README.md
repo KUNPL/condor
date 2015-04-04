@@ -6,9 +6,9 @@ Python 매크로를 이용해서 일을 돌리고 싶다.
 
 	$ ./condor_python.sh [폴더 이름] [실행파일 이름] [매개변수1] ... [매개변수7]
 
-**condor_root_simple.sh** : 현재 경로에 결과들을 저장한다.
+**condor_python_simple.sh** : 현재 경로에 결과들을 저장한다.
 
-	$ ./condor_root_simple.sh [실행파일 이름] [매개변수1] ... [매개변수7]
+	$ ./condor_python_simple.sh [실행파일 이름] [매개변수1] ... [매개변수7]
 
 #### 해보자!
 run_python 폴더에 print.py 을 컴파일 및 실행,
