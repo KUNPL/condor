@@ -26,7 +26,7 @@
 
 마지막에 "Queue" 제외하고 모두 "[옵션] = [값]"의 형태를 지닌다. 우린 단지 어떤 [옵션]이 어떤 [값]을 넣었을때 어떻게 작동하는지 알고있으면 된다. 
 
-아래는 우리가 쓸만한 옵션들을 적어보았다. 더 많은 옵션들을 보고 싶다면  [condor_submit](http://research.cs.wisc.edu/htcondor/manual/v8.0/condor_submit.html)를 참고하자.
+아래에 우리가 쓸만한 옵션들을 적어보았다. 더 많은 옵션들을 보고 싶다면  [condor_submit](http://research.cs.wisc.edu/htcondor/manual/v8.0/condor_submit.html)를 참고하자.
 참고로 제출파일은 대소문자를 구분하지 않으며 주석은 "#" 이용한다.
 
 |옵션|설명|예제|
