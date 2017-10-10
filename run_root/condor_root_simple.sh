@@ -2,6 +2,7 @@
 #
 # created by Genie
 # modified by JungWoo
+# modified by Byul Moon
 #
 # - condor_root_simple.sh : submit root macro to condor without making initial directory.
 #
@@ -16,7 +17,8 @@
 #
 # 4) If you don't need initial directory, or any other changes should be made,
 # write your own submit file!
-
+#
+# 5) BM : This script has been modified to avoid submitting a job to kunpl07 which has some problem.
 
 dir=`pwd`
 outfile=$1_`date +"%Y%m%d"`
@@ -37,6 +39,7 @@ Universe     = vanilla
 GetEnv       = True
 Request_cpus = 1
 Notification = Always
+Requirements = machine =!= "kunpl07"
 #Notify_user  = CHANGE_THIS_TO_YOUR_EMAIL
 
 Queue
