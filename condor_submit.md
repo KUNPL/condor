@@ -1,6 +1,6 @@
 # 콘도르(Condor) 작업 제출하기
 
-[README.md](https://github.com/KUNPL/condor/blob/master/README.md)에 내가 원하는 기능이 없다면 이 글을 읽어보자.
+지금 버전이 아닌 예전 [old README.md](https://github.com/KUNPL/condor/blob/325b3de62b9df8d3db4597eeefb53c92d678c85f/README.md)를 읽어보고 여기에도 내가 원하는 기능이 없다면 이 글을 읽어보자.
 
 콘도르를 사용하기 위해선 두개의 파일이 필요하다.
 
@@ -11,7 +11,7 @@
 
     $ condor_submit [제출파일]
   
-즉, 콘도르를 통해서 일을 시키는 방법은 제출파일을 제출하는것 뿐이다. 따라서 실행파일을 바꾸거나 매개변수를 바꾸려면 매번 제출파일의 내용을 수정해야 한다. 이렇게 수정하는 작업이 귀찮기 때문에 [README.md](https://github.com/KUNPL/condor/blob/master/README.md) 에서 설명한 **condor_executable.sh** 파일은 뒤에 오는 매개변수들을 이용해 알아서 제출파일을 1)만들고 2)제출하고 3)지우는 일을 하도록 만들었다. 하지만 언젠가는 제출파일을 직접 써야 하는 때가 올 수도 있다.
+즉, 콘도르를 통해서 일을 시키는 방법은 제출파일을 제출하는것 뿐이다. 따라서 실행파일을 바꾸거나 매개변수를 바꾸려면 매번 제출파일의 내용을 수정해야 한다. 이렇게 수정하는 작업이 귀찮기 때문에 [old README.md](https://github.com/KUNPL/condor/blob/325b3de62b9df8d3db4597eeefb53c92d678c85f/README.md) 에서 설명한 **condor_executable.sh** 파일은 뒤에 오는 매개변수들을 이용해 알아서 제출파일을 1)만들고 2)제출하고 3)지우는 일을 하도록 만들었다. 하지만 언젠가는 제출파일을 직접 써야 하는 때가 올 수도 있다.
 
 #### 직접 써보자!
 
